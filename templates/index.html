@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteTube Downloader</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-elite-blue">
+    <div class="container my-5">
+        <div class= "row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg border-0 card-hover-effect"> 
+                    <div class="card-header bg-primary text-white text-center py-4"> <h2 class="mb-0 fw-bold">🎥 EliteTube Downloader</h2> <p class="small mb-0 opacity-75"> Video and Audio Converter (MP4/MP3)</p>
+                     </div>
+                     <div class="card-body p-5"> <form method="POST" action="/">
+                            <div class="mb-4"> <label for="url_input" class="form-label fw-bold">YouTube Video URL</label>
+                                <input type="url" class="form-control form-control-lg input-hover-effect" id="url_input" name="url" placeholder="Paste link here..." required>
+                            </div>
+                            
+                            <label class="form-label fw-bold d-block text-center mb-3">Select Output Format:</label>
+                            <div class="d-grid gap-3 d-md-flex justify-content-md-center mb-4"> <button type="submit" name="format" value="mp4" class="btn btn-success btn-lg flex-fill btn-hover-effect">
+                                    <i class="fas fa-video me-2"></i> Download MP4 
+                                </button>
+                                <button type="submit" name="format" value="mp3" class="btn btn-warning btn-lg flex-fill btn-hover-effect">
+                                    <i class="fas fa-music me-2"></i> Convert to MP3 
+                                </button>
+                            </div>
+                        </form>
+                        
+                        {% for type, text in messages %}
+                            <div class="alert alert-{{'danger' if type == 'error' else 'success'}} alert-dismissible fade show shadow-sm" role="alert">
+                                 <strong>{{'Error' if type =='error' else 'Success'}}:</strong> {{ text }}
+                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}    
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-center text-muted py-4 mt-auto"> <p class="mb-0 small">Built by an Elite Engineer | For Legal Use Only</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/978051770d.js" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* --- EliteTube Downloader: Custom Stylesheet --- */
+
+/* 1. Base Styles & Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Use a very subtle light gray background for depth */
+    background-color: #f0f2f5 !important; 
+}
+
+/* Ensure the content container pushes the footer down */
+.container {
+    flex: 1 0 auto;
+}
+
+/* 2. Custom Color Palette (The "Elite" Theme: Dark Teal/Success) */
+
+/* Custom Primary Color (Dark Teal/Deep Cyan) */
+.bg-primary {
+    background-color: #00796b !important; /* Deep Cyan/Teal for professional look */
+    /* Add a subtle dark gradient for depth */
+    background-image: linear-gradient(180deg, #00897b, #00796b) !important;
+}
+
+/* Custom Success Button (Brighter Green for emphasis) */
+.btn-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.2);
+    transition: all 0.2s;
+}
+.btn-success:hover {
+    background-color: #218838 !important;
+    border-color: #1e7e34 !important;
+    box-shadow: 0 6px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Custom Warning Button (Standard Orange/Yellow for distinction) */
+.btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #333 !important; /* Ensure text is dark and readable */
+    box-shadow: 0 4px 6px rgba(255, 193, 7, 0.2);
+    transition: all 0.2s;
+}
+.btn-warning:hover {
+    background-color: #e0a800 !important;
+    border-color: #d39e00 !important;
+    color: #333 !important;
+    box-shadow: 0 6px 8px rgba(255, 193, 7, 0.3);
+}
+
+
+/* 3. Component Refinements (Card, Input) */
+
+/* Card styling: Defined shadow for a floating, modern feel */
+.card {
+    border-radius: 1rem; /* Softer rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+    overflow: hidden; /* Ensures header corners are contained */
+}
+
+.card-header {
+    /* Removed redundant border-radius lines from previous version */
+    /* The main card radius handles the corners */
+    border-bottom: none;
+}
+
+/* Card Body: Clean white background for contrast */
+.card-body {
+    background-color: #ffffff;
+}
+
+/* Input Focus: Uses the deep teal color for focus */
+.form-control-lg:focus {
+    border-color: #00796b; /* Deep Teal focus color */
+    box-shadow: 0 0 0 0.25rem rgba(0, 121, 107, 0.2); /* Soft teal glow */
+}
+
+/* 4. Utility/Icon Styles */
+.fa-video, .fa-music {
+    font-size: 1.1em;
+}
+
+/* Footer Style */
+footer {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 2rem;
+    padding-top: 1rem !important;
+}
+/* --- Add these rules to static/style.css --- */
+
+/* Bluish-White Background for Body */
+.bg-elite-blue {
+    background-color: #e9f0f9 !important; /* A very light, professional bluish-white */
+}
+
+/* 1. Card Hover Effect (Shadow increases on hover) */
+.card-hover-effect {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-hover-effect:hover {
+    /* Slightly bigger, more prominent shadow on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-3px); /* Lifts the card slightly */
+}
+
+/* 2. Button Hover Effect (Lift and brighter shadow) */
+.btn-hover-effect {
+    transition: all 0.2s ease-in-out;
+    transform: translateY(0);
+}
+
+.btn-hover-effect:hover {
+    transform: translateY(-2px); /* Lifts the button slightly */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Input Focus/Hover Effect (Slightly more intense border focus) */
+.input-hover-effect:focus {
+    /* Reusing your existing focus style but ensuring a strong presence */
+    border-color: #00796b; 
+    box-shadow: 0 0 0 0.25rem rgba(0, 121, 107, 0.4); /* Stronger glow */
+}
